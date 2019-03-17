@@ -1,0 +1,33 @@
+
+#our_services {
+	margin-top: 50px;
+	padding: 10px;
+	text-align: center;
+	background-color: $background-grey;
+}
+#our_services img {
+	margin: auto;
+}
+#our_services h4 {
+	text-transform: uppercase;
+	color: $color-red;
+}
+#our_services p {
+	color: $color-grey;
+}
+#our_services a {
+	text-decoration: none;
+	color: $color-black;
+	font-weight: bold;
+}
+#our_services a i {
+	margin-left: 10px;
+}
+@media screen and (min-width: 35.5em) {
+	#our_services {
+		margin-top: 40px;
+	}
+	#our_services .service {
+		padding: 10px;
+	}
+}

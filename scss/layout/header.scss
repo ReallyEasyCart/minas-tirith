@@ -1,0 +1,81 @@
+/* Pre-Header */
+#pre-header {
+    display: block;
+    margin: auto;
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 2147483647; /* Max z-index value on pretty much all browsers (Firefox 0-3 don't really count) */
+}
+
+/* Slight change from default as our ul's are inside container divs */
+.nav.is-open > div > ul,
+.nav .is-open > div > ul {
+    max-height: 550px;
+    overflow: auto;
+}
+.nav.is-open,
+.togglable.is-open {
+    margin-top: 0;
+}
+
+/* Nav Icons */
+.header-nav-icons {
+    background: transparent;
+    text-align: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 0 0.5em;
+    background-color: $background-blue;
+}
+.header-nav-icons .nav-icon {
+    padding: 16px 8px;
+    display: inline-block;
+    color: #FFF;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+}
+.header-nav-icons .fa-lg {
+    font-size: 1.666em;
+}
+
+/* Navbar */
+#pre-header .nav-primary-container,
+#pre-header .nav-primary li ul {
+    background-color: $background-blue;
+}
+#pre-header .nav-primary {
+    text-align: left;
+    margin: 0 auto;
+    padding: 0 0.5em;
+}
+#pre-header .nav-primary a {
+    color: #FFF;
+}
+
+/* Tablet+ */
+@media screen and (min-width: 48em) {
+    /* Logo */
+    #header .header-logo img {
+        max-height: 110px; /* Header height is max 130, -20px for layout-container-inner padding */
+        margin: auto;
+    }
+}
+
+/* Laptop+ */
+@media screen and (min-width: 64em) {
+    /* Nav Icons */
+    .header-nav-icons {
+        display: none;
+    }
+}

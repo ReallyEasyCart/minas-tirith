@@ -1,0 +1,50 @@
+
+.McKarousel {
+	overflow: hidden;
+	position: relative;
+}
+
+.McKarousel-wrapper {
+	position: relative;
+	margin: 0;
+	left: 0;
+}
+.McKarousel-wrapper > div {
+	float: left;
+	padding: 0 35px;
+}
+
+.McKarousel-arrow {
+	position: absolute;
+	top: 25%;
+	width: 20px;
+	line-height: 20px;
+	font-size: 32px;
+	text-align: center;
+	color: #DDD;
+	z-index: 2;
+	cursor: pointer;
+}
+.McKarousel-arrow.McKarousel-right {
+	right: 0;
+}
+.McKarousel-arrow.McKarousel-left {
+	left: 0;
+}
+
+@media screen and (min-width: 48em) {
+	.McKarousel.grid-slider {
+		overflow: visible;
+	}
+	.McKarousel.grid-slider .McKarousel-arrow {
+		display: none;
+	}
+	.McKarousel-wrapper {
+		width: 100%;
+		font-size: 0;
+	}
+	.McKarousel-wrapper > div {
+		display: inline-block;
+		font-size: 14px;
+	}
+}

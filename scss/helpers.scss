@@ -1,0 +1,36 @@
+.show-on-mobile-lg {
+	display: none;
+}
+.show-on-tablet {
+	display: none;
+}
+.show-on-desktop {
+	display: none;
+}
+
+@media screen and (min-width: 35.5em) {
+	.show-mobile-only {
+		display: none !important;
+	}
+	.show-on-mobile-lg {
+		display: block;
+	}
+}
+
+@media screen and (min-width: 48em) {
+	.show-on-tablet {
+		display: block;
+	}
+	.show-before-tablet {
+		display: none !important;
+	}
+}
+
+@media screen and (min-width: 64em) {
+	.show-on-desktop {
+		display: block;
+	}
+	.show-before-desktop {
+		display: none !important;
+	}
+}

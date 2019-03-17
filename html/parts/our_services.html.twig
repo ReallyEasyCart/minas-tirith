@@ -1,0 +1,27 @@
+{% set ourServices = module('our-services').items %}
+<div id="our_services">
+    <h2 class="weight-normal center">Our Services</h2>
+
+    <div id="our_services_carousel">
+        {% for service in ourServices %}
+            <div class="service">
+                <div class="our-services-image">
+                    <img src="{{ service.image }}" />
+                </div>
+                <div class="our-services-info">
+                    <h4 class="h2">{{ service.name }}</h4>
+                    <p>{{ service.content|striptags }}</p>
+                    <a href="{{ service.link }}">Find out more<i class="fa fa-caret-right"></i></a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+    jQuery(function ($) {
+        window.McKarousel.enable($('#our_services_carousel'), {
+            sliderType: 'grid-slider'
+        });
+    });
+</script>

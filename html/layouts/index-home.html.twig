@@ -1,0 +1,96 @@
+
+<!-- Middle content -->
+<div id="middle" class="layout-container">
+
+    {% include '/html/parts/home_hero.html.twig' %}
+    
+    <div class="layout-container-inner pure-g">
+
+        {# any messages to show back to the user #}
+        {% if page.msg != '' %}
+            <div class="pure-u-1">{{ page.msg }}</div>
+        {% endif %}
+
+
+        {# slider #}
+        {% block content_slider %}
+            {% if page.show_content_slider %}
+                {{ page.content_slider }}
+            {% endif %}
+        {% endblock %}
+
+
+        {# main content of the page #}
+        {% block main %}
+
+            <!-- main body -->
+            {% if page.show_left_hand_sidebar and page.show_right_hand_sidebar %}
+                <main id="main" class="pure-u-1 pure-u-md-1-2 grid-push-md-1-4" role="main">
+            {% elseif page.show_left_hand_sidebar %}
+                <main id="main" class="pure-u-1 pure-u-md-3-4 grid-push-md-1-4" role="main">
+            {% elseif page.show_right_hand_sidebar %}
+                <main id="main" class="pure-u-1 pure-u-md-3-4" role="main">
+            {% else %}
+                <main id="main" class="pure-u-1" role="main">
+            {% endif %}
+
+                <!-- page content -->
+                <div class="rec-user-content">
+
+                    {% include '/html/parts/contact_form.html.twig' %}
+
+                    {% include '/html/parts/our_services.html.twig' %}
+
+                </div>
+
+                {# Main body apps (e.g. contact form, testimonials, etc.) #}
+                {% if page.show_page_file %}
+
+                    {{ page.page_file }}
+
+                {% endif %}
+
+                {# Products #}
+                {% if page.show_products_area %}
+
+                    {{ page.products_area }}
+
+                {% endif %}
+
+            </main>
+
+        {% endblock %}
+
+
+        {# Sidebars and sidebar apps #}
+
+        {% block sidebar_left %}
+            {% if page.show_left_hand_sidebar %}
+
+                {% if page.show_right_hand_sidebar %}
+                    <aside id="sidebar-left" class="sidebar pure-u-1 pure-u-md-1-4 grid-pull-md-1-2">
+                {% else %}
+                    <aside id="sidebar-left" class="sidebar pure-u-1 pure-u-md-1-4 grid-pull-md-3-4">
+                {% endif %}
+
+                    {{ page.left_hand_sidebar }}
+
+                </aside>
+
+            {% endif %}
+        {% endblock %}
+
+        {% block sidebar_right %}
+            {% if page.show_right_hand_sidebar %}
+
+                <aside id="sidebar-right" class="sidebar pure-u-1 pure-u-md-1-4">
+
+                    {{ page.right_hand_sidebar }}
+
+                </aside>
+
+            {% endif %}
+        {% endblock %}
+
+    </div>
+</div>

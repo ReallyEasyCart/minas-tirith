@@ -1,7 +1,9 @@
 // 
-// Rivendell SCSS
+// Minas Tirith SCSS
 // Learn scss: https://sass-lang.com/guide#topic-2
 // 
+
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:300,400,500,600,700,800,900');
 
 // variables & mixins
 @import "vars";
@@ -9,6 +11,7 @@
 
 // default styling such as fonts
 @import "base";
+@import "helpers";
 
 // actual design / layout
 @import "layout/header";
@@ -16,7 +19,11 @@
 @import "layout/footer";
 
 // specific modules
-@import "modules/modal"; // example module
+@import "modules/McKarousel";
+@import "modules/hero-unit";
+@import "modules/contact-form";
+@import "modules/our-services";
+@import "modules/navbar";
 
 // specific pages, or groupings of pages
 @import "pages";

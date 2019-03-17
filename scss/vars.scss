@@ -3,8 +3,18 @@
 // https://robots.thoughtbot.com/sass-variables
 //
 
-$default-font: Arial, sans-serif;
+$default-font: 'Libre Franklin', sans-serif;
 $heading-font: $default-font;
+
+
+$background-blue: #012B3B;
+$background-red: #9C1311;
+$background-grey: #F6F6F6;
+$background-black: #030E06;
+
+$color-red: #9C1311;
+$color-black: #010101;
+$color-grey: #848484;
 
 // e.g.
 // Material design style vars

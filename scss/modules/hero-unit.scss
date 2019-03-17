@@ -1,0 +1,74 @@
+#hero-unit {
+	/*background: url('/userfiles/images/home_hero.jpg');*/
+    text-align: center;
+    background-color: $background-grey;
+}
+
+#hero-unit h2 {
+	color: $color-red;
+	text-transform: uppercase;
+	margin-bottom: 0;
+}
+#hero-unit h3 {
+	color: $color-black;
+	text-transform: uppercase;
+	margin-top: 0;
+}
+#hero-unit p.hero-unit-text {
+	color: $color-grey;
+}
+#hero-unit p.hero-unit-phone {
+	color: $color-red;
+	font-size: 1.3em;
+	font-weight: bold;
+}
+#hero-unit .hero-unit-phone a {
+	color: $color-red;
+	text-decoration: none;
+}
+.hero-unit-subline {
+	background-color: $background-red;
+	color: #FFF;
+	text-align: center;
+}
+.hero-unit-subline p {
+	margin: 0;
+	padding: 10px 0;
+	font-size: 1.3em;
+}
+.hero-unit-subline p a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #FFF;
+}
+
+
+@media screen and (min-width: 35.5em) {
+	#hero-unit .hero-unit-container {
+		width: 50%;
+		max-width: 85em;
+		padding: 0 0.5em;
+		margin: 0;
+	}
+	#hero-unit h2,
+	#hero-unit h3,
+	#hero-unit .hero-unit-text,
+	#hero-unit .hero-unit-phone {
+		text-align: left;
+	}
+	#hero-unit h2,
+	#hero-unit h3 {
+		padding: 0 10px;
+	}
+	#hero-unit .hero-unit-text,
+	#hero-unit .hero-unit-phone {
+		padding: 5px 10px;
+	}
+}
+
+@media screen and (min-width: 64em) {
+	#hero-unit .hero-unit-container {
+		width: 40%;
+		padding-left: calc((100% - 85em) / 2);
+	}
+}

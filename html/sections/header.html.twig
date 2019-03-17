@@ -1,0 +1,71 @@
+<!-- Header content -->
+<div id="pre-header">
+    {% block header_nav_icons %}
+        <!-- nav icons -->
+        <div class="header-nav-icons show-before-tablet">
+
+            {# when shop mode is enabled, the nav auto expands both the nav and the search #}
+            <a data-toggle=".mobile-header-nav" class="nav-icon nav-toggle-icon">
+                <i class="fa fa-bars fa-lg"></i>
+            </a>
+            <a href="mailto:{{ company.contact_us_email|safe_email }}" class="nav-icon">
+                <i class="fa fa-envelope fa-lg"></i>
+            </a>
+            <a href="tel:{{ company.phone_number }}" class="nav-icon">
+                <i class="fa fa-phone fa-lg"></i>
+            </a>
+        </div>
+    {% endblock %}
+
+    <nav class="mobile-header-nav nav nav-sub-indicators nav-sub-indicator-arrows" id="mobileNavigation" role="navigation">
+        <div class="nav-primary-container layout-container">
+            <ul class="nav-primary layout-container-inner">
+                {{ header.menu }}
+                <li>
+                    <a href="mailto:{{ company.contact_us_email|safe_email }}">
+                        <i class="fa fa-envelope"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="tel:{{ company.phone_number }}">
+                        <i class="fa fa-phone"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<!-- Header content -->
+<header id="header" class="layout-container" role="banner">
+    <div class="layout-container-inner clearfix">
+
+        {% block header_logo %}
+            <!-- Logo -->
+            <div class="header-logo pull-left-lg">
+                {% if theme.config.show_logo %}
+                    <a href="{{ directory }}">
+                        <img src="{{ company.logo_image }}" alt="{{ company.name }}">
+                    </a>
+                {% elseif theme.config.show_company_name %}
+                    <a href="{{ directory }}">
+                        <strong class="header-title h1">{{ company.name }}</strong>
+                    </a>
+                    {% if theme.config.show_company_slogan %}
+                        <span class="header-slogan h3">{{ company.slogan }}</span>
+                    {% endif %}
+                {% endif %}
+            </div>
+        {% endblock %}
+
+        {% block header_nav %}
+            <!-- Main menu / nav -->
+            <nav class="header-nav nav nav-sub-indicators nav-sub-indicator-arrows show-on-desktop" id="navigation" role="navigation">
+
+                <ul class="nav-primary">{{ header.menu }}</ul>
+
+            </nav>
+        {% endblock %}
+
+    </div>
+</header>

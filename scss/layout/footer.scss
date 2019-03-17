@@ -1,0 +1,61 @@
+#footer {
+	background-color: $background-red;
+}
+#footer a {
+	text-decoration: none;
+}
+#footer .footer-block {
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 1em;
+}
+
+#footer .footer-title {
+	display: block;
+	text-align: center;
+	color: #4A4A4A;
+}
+#footer .footer-address {
+	text-align: center;
+}
+#footer .footer-address address {
+	font-style: normal;
+}
+#footer .footer-address .vcard .org {
+	display: none;
+}
+
+#footer .footer-links .nav {
+	text-align: center;
+}
+#footer .footer-links .nav li a {
+	border-bottom: none;
+	padding: 8px;
+}
+
+.footer-social-links, .footer-copyright {
+	background-color: transparent;
+	text-align: center;
+}
+.footer-social-links a {
+	padding: 0 5px;
+}
+
+@media screen and (min-width: 35.5em) {
+	#footer .footer-block {
+		border: 0;
+	}
+
+	#footer .footer-links .nav li {
+		display: block;
+	}
+}
+
+@media screen and (min-width: 48em) {
+	#footer .footer-address,
+	#footer .footer-links .nav {
+		text-align: left;
+	}
+	.footer-social-links, .footer-copyright {
+		min-height: auto;
+	}
+}
