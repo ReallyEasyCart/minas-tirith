@@ -1,11 +1,11 @@
 .show-on-mobile-lg {
-	display: none;
+	display: none !important;
 }
 .show-on-tablet {
-	display: none;
+	display: none !important;
 }
 .show-on-desktop {
-	display: none;
+	display: none !important;
 }
 
 @media screen and (min-width: 35.5em) {
@@ -13,13 +13,13 @@
 		display: none !important;
 	}
 	.show-on-mobile-lg {
-		display: block;
+		display: block !important;
 	}
 }
 
 @media screen and (min-width: 48em) {
 	.show-on-tablet {
-		display: block;
+		display: block !important;
 	}
 	.show-before-tablet {
 		display: none !important;
@@ -28,7 +28,7 @@
 
 @media screen and (min-width: 64em) {
 	.show-on-desktop {
-		display: block;
+		display: block !important;
 	}
 	.show-before-desktop {
 		display: none !important;

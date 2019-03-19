@@ -3,8 +3,6 @@
 // Learn scss: https://sass-lang.com/guide#topic-2
 // 
 
-@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:300,400,500,600,700,800,900');
-
 // variables & mixins
 @import "vars";
 @import "mixins";
@@ -21,7 +19,6 @@
 // specific modules
 @import "modules/McKarousel";
 @import "modules/hero-unit";
-@import "modules/contact-form";
 @import "modules/our-services";
 @import "modules/navbar";
 

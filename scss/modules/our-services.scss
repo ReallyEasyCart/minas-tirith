@@ -1,12 +1,12 @@
 
 #our_services {
-	margin-top: 50px;
 	padding: 10px;
 	text-align: center;
 	background-color: $background-grey;
 }
 #our_services img {
 	margin: auto;
+	max-height: 40px;
 }
 #our_services h4 {
 	text-transform: uppercase;

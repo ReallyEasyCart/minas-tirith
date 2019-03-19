@@ -50,8 +50,7 @@
 }
 
 /* Navbar */
-#pre-header .nav-primary-container,
-#pre-header .nav-primary li ul {
+#pre-header .nav-primary-container {
     background-color: $background-blue;
 }
 #pre-header .nav-primary {
@@ -63,11 +62,18 @@
     color: #FFF;
 }
 
+#header .layout-container-inner {
+    height: 100px;
+}
+#header .header-logo img {
+    padding-top: 10px;
+}
+
 /* Tablet+ */
 @media screen and (min-width: 48em) {
     /* Logo */
     #header .header-logo img {
-        max-height: 110px; /* Header height is max 130, -20px for layout-container-inner padding */
+        max-height: 110px; /* Header height is max 150, -40px for layout-container-inner padding */
         margin: auto;
     }
 }

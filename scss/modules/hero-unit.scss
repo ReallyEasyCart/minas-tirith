@@ -1,39 +1,91 @@
+/* Base */
 #hero-unit {
-	/*background: url('/userfiles/images/home_hero.jpg');*/
     text-align: center;
-    background-color: $background-grey;
+    display: flex;
+    flex-direction: column;
+}
+#hero-unit .hero-unit-container {
+	background-color: $background-grey;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	order: 1;
 }
 
-#hero-unit h2 {
+/* Hero Unit Text */
+.hero-unit-container h2 {
 	color: $color-red;
 	text-transform: uppercase;
 	margin-bottom: 0;
 }
-#hero-unit h3 {
+.hero-unit-container h3 {
 	color: $color-black;
 	text-transform: uppercase;
 	margin-top: 0;
 }
-#hero-unit p.hero-unit-text {
+.hero-unit-container p.hero-unit-text {
 	color: $color-grey;
 }
-#hero-unit p.hero-unit-phone {
+.hero-unit-container p.hero-unit-phone {
 	color: $color-red;
 	font-size: 1.3em;
 	font-weight: bold;
 }
-#hero-unit .hero-unit-phone a {
+.hero-unit-container .hero-unit-phone a {
 	color: $color-red;
 	text-decoration: none;
 }
+
+/* Hero Unit Form */
+.hero-form-wrapper {
+	background-color: #FFFFFF;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	order: 3;
+	width: 100%;
+}
+.hero-form-wrapper h2 {
+	text-transform: uppercase;
+	text-align: center;
+	color: $color-black;
+}
+.hero-form-wrapper form ul {
+	list-style: none;
+	padding: 0;
+}
+/* This rule needs to be more specific to override base form styling */
+.hero-form-wrapper form.rec-form input:not(.rec-form-button),
+.hero-form-wrapper form.rec-form select,
+.hero-form-wrapper form.rec-form textarea {
+	width: 100%;
+	max-width: 100%; /* To override base form styling */
+	-webkit-border-radius: 5px;
+	        border-radius: 5px;
+}
+.hero-form-wrapper form select:invalid {
+	color: rgb(117, 117, 117);
+}
+.hero-form-wrapper .rec-form-footer-section {
+	text-align: center;
+}
+.hero-form-wrapper .generated_button, 
+.hero-form-wrapper .pagination a, 
+.hero-form-wrapper button, 
+.hero-form-wrapper input[type="submit"], 
+.hero-form-wrapper input[type="button"], 
+.hero-form-wrapper input[type="reset"] {
+	padding: 0.8em 2em;
+}
+
+/* Hero Unit Subline */
 .hero-unit-subline {
 	background-color: $background-red;
 	color: #FFF;
 	text-align: center;
+	order: 2;
 }
 .hero-unit-subline p {
 	margin: 0;
-	padding: 10px 0;
+	padding: 20px 0;
 	font-size: 1.3em;
 }
 .hero-unit-subline p a {
@@ -44,11 +96,12 @@
 
 
 @media screen and (min-width: 35.5em) {
-	#hero-unit .hero-unit-container {
+	#hero-unit {
+		flex-direction: row;
+	}
+	#hero-unit .hero-unit-container,
+	#hero-unit .hero-form-wrapper {
 		width: 50%;
-		max-width: 85em;
-		padding: 0 0.5em;
-		margin: 0;
 	}
 	#hero-unit h2,
 	#hero-unit h3,
@@ -63,6 +116,14 @@
 	#hero-unit .hero-unit-text,
 	#hero-unit .hero-unit-phone {
 		padding: 5px 10px;
+	}
+
+	.contact-form-container {
+		border: 8px solid $background-red;
+		-webkit-border-radius: 5px;
+		        border-radius: 5px;
+		background: #FFF;
+		padding: 5px 15px;
 	}
 }
 
